@@ -16,3 +16,22 @@ const bar = (infos) => {
 ```
 
 The short key of this refactor is `cmdF8` and actions name is `change signature` on idea.
+
+## Change Bidirectional Association to Unidirectional
+You have a two-way association but one class no longer needs features from the other.
+
+Drop the unneeded end of the association
+
+I thinks this situation is not common in front-end developing.
+
+Like below: `customer` 1 => * `order`
+
+```javascript
+const Customer = {
+    orders: [...orders]
+};
+
+const Order = {
+    ...
+};
+```
