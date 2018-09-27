@@ -35,3 +35,31 @@ const Order = {
     ...
 };
 ```
+
+## Extract method
+You have a code fragment that can be grouped together.
+
+Move this code to a separate new method (or function) and replace the old code with a call to the method.
+
+Like: 
+```javascript
+
+const printFoo = () => {
+    console.log('print foo');
+
+    console.log('print bar');
+    console.log('print bar title');
+}
+
+const printBar = () => {
+    console.log('print bar');
+    console.log('print bar title');
+};
+
+const printFooBar = () => {
+    console.log('print foo');
+    
+    printBar();
+};
+
+```
