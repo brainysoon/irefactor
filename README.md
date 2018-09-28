@@ -63,3 +63,26 @@ const printFooBar = () => {
 };
 
 ```
+
+## Inline Method
+When a method body is more obvious than the method itself, use this technique.
+
+Replace calls to the method with the method's content and delete the method itself.
+
+In Js it's more liek:
+
+```javascript
+
+const foo = () => {
+    formatToYYYYMMDD(time);
+};
+
+const formatToYYYYMMDD() = (time) => {
+    time.format('yyyy-mm-dd');
+};
+
+const bar = () => {
+    time.format('yyyy-mm-dd');
+};
+
+```
