@@ -86,3 +86,20 @@ const bar = () => {
 };
 
 ```
+
+## Extract Variable
+You have an expression that is hard to understand.
+
+Place the result of the expression or its parts in separate variables that are self-explanatory.
+
+I think this is very useful if the expression is too long to understand
+
+Like: 
+```javascript
+const foo = isWithinChina() && theCity === 'Chengdu' && theCompany === 'ThoughtWorks' || theName === 'TWer';
+
+const isWithinChengduOffice = isWithinChina() && theCity === 'Chengdu' && theCompany === 'ThoughtWorks';
+const isTWer = theName === 'TWer'; 
+
+const foo = isWithinChengduOffice && isTWer;
+```
